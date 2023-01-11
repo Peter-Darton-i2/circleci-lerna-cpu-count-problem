@@ -1,0 +1,24 @@
+{
+  "name": "@i2internal/app-two",
+  "private": true,
+  "type": "commonjs",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "ci:build": "npm run build",
+    "ci:test": "jest --ci --collect-coverage",
+    "build": "tsc --build .",
+    "test": "jest --collect-coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "jest": "^29.3.1",
+    "jest-junit": "^15.0.0",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
+  },
+  "volta": {
+    "extends": "../package.json",
+    "node": "16.18.0"
+  }
+}
