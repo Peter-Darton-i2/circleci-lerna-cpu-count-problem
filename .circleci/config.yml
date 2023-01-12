@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ccinode: circleci/node@5
+  ccinode: circleci/node@dev:ceb0383ed3c5b425a7dca94eaed22d26de161717
 
 workflows:
   build:
@@ -9,7 +9,7 @@ workflows:
       - ccinode/run:
           name: Build
           version: "16.18"
-          resource_class: medium+
+          resource_class: medium
           npm-run: "ci:build"
           post-steps:
             - persist_to_workspace:
@@ -26,7 +26,7 @@ workflows:
           requires:
             - Build
           version: "16.18"
-          resource_class: medium
+          resource_class: small
           setup:
             - attach_workspace:
                 at: "."
@@ -36,3 +36,5 @@ workflows:
                 path: "junit-reports"
             - store_artifacts:
                 path: "junit-reports"
+
+# VS Code Extension Version: 1.5.1
