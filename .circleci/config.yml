@@ -9,18 +9,14 @@ workflows:
       - ccinode/run:
           name: Build
           version: "16.18"
-          resource_class: medium
+          resource_class: small
           npm-run: "ci:build"
           post-steps:
             - persist_to_workspace:
                 root: "."
                 paths:
-                  - "*/dist"
-                  - "*/*/dist"
-                  - "*/*/*/dist"
                   - "*/build"
-                  - "*/*/build"
-                  - "*/*/*/build"
+                  - "*/tsconfig.tsbuildinfo"
       - ccinode/run:
           name: Unit Tests
           requires:
