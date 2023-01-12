@@ -1,5 +1,5 @@
 {
-  "name": "@i2internal/mymonorepo",
+  "name": "circleci-lerna-cpu-count-problem",
   "private": true,
   "version": "0.0.0",
   "description": "",

@@ -1,5 +1,5 @@
 {
-  "name": "@i2internal/app-two",
+  "name": "app-two",
   "private": true,
   "type": "commonjs",
   "main": "build/index.js",
