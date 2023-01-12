@@ -1,6 +1,6 @@
 import { hello } from './foo';
 
-describe('hello', () => {
+describe('foo hello', () => {
   it(`says hello`, async () => {
     const expected = 'Hello Mr Flibble';
     const who = 'Mr Flibble';
